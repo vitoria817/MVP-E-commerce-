@@ -1,0 +1,16 @@
+/* 
+  STYLE.CSS
+  Arquivo principal de estilos do site — reúne tudo que não muda entre segmentos.
+  
+  Contém, nessa ordem:
+  1. RESET       → zera margens/paddings padrão do navegador
+  2. TOKENS      → variáveis fixas: grid de 8px, tipografia (Inter/Playfair), 
+                   raio de borda, sombras, tamanho mínimo de botão (44px)
+  3. COMPONENTES → estilos reutilizáveis: header, botão, input, card de produto,
+                   badge, stepper, bottom sheet, carrossel, abas, rodapé
+  4. PÁGINAS     → ajustes específicos de layout de cada tela (home, listagem,
+                   produto, carrinho, checkout, confirmação, agendamento, painel)
+  
+  Cores NÃO ficam aqui — elas vêm do temas.css através de variáveis CSS,
+  pra qualquer componente funcionar igual em qualquer segmento.
+*/
