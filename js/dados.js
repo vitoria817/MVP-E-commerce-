@@ -1,1 +1,0 @@
-//produtos, serviços e pedidos de exemplo (mock)

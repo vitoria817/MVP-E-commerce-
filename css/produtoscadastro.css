@@ -65,3 +65,25 @@ body{
 .Painel{
   margin-right: 780px;
 }
+
+.barra-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgb(227, 226, 226);
+  border: 1px solid #414040;
+  border-radius: 30px;
+  padding: 8px 20px;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.icone-estoque,.icone-configuracao,.icone-cadastro,.icone-dados{
+  text-decoration: none;
+}
+
+.barra-nav a:hover {
+  background-color: #010000;
+  transform: scale(1.1);
+  border-radius: 10px;
+}

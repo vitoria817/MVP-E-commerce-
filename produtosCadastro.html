@@ -4,17 +4,32 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/painel.css">
+    <link rel="stylesheet" href="css/produtoscadastro.css">
     <title>Painel</title>
  </head>
  <body>
    <div class="Painel">
       <h1 id="">Painel do Lojista</h1>
    </div>
+   <!--navegação entre telas do lojista-->
+   <div class="divBarraNavegacao">
+      <nav class="barra-nav">
+  <a href="estoque.html" class="icone-estoque">📦</a>
+  <a href="config.html" class="icone-configuracao">⚙️</a>
+  <a href="produtosCadastro.html" class="icone-cadastro">🛍️</a>
+  <a href="dados.html" class="icone-dados">📊</a>
+</nav>
+  </div>
+  <h1 id="TituloCatalogo">Catálogo de produtos</h1>
+
+  <!--Fotos dos produtos e descrições-->
+  <div class="catalogoProdutos">
+    <img id="preview" src="imagem-padrao.jpg" alt="Foto do produto" width="150">
+    <input type="file" id="inputImagem" accept="image/*">
+  </div>
+
     <!--Parte para cadastrar os produtos da loja-->
     <div class="CadastroProduto">
-
-        <h1 id="TituloCatalogo">Catálogo de produtos</h1>
         <label for="nome" id="nome">Nome:</label>
         <input type="text" id="NomeProduto" name="NomeProduto" placeholder="Digite o nome do produto">
 
