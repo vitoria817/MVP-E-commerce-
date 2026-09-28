@@ -1,48 +1,62 @@
-<!-- Painel do lojista,  Área administrativa da loja -->
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/produtoscadastro.css">
-    <title>Painel</title>
- </head>
- <body>
-   <div class="Painel">
-      <h1 id="">Painel do Lojista</h1>
-   </div>
-   <!--navegação entre telas do lojista-->
-   <div class="divBarraNavegacao">
-      <nav class="barra-nav">
-  <a href="estoque.html" class="icone-estoque">📦</a>
-  <a href="config.html" class="icone-configuracao">⚙️</a>
-  <a href="produtosCadastro.html" class="icone-cadastro">🛍️</a>
-  <a href="dados.html" class="icone-dados">📊</a>
-</nav>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/produtoscadastro.css">
+  <title>Painel</title>
+</head>
+<body>
+  <!-- Painel do lojista, área administrativa da loja -->
+  <div class="Painel">
+    <h1>Painel do Lojista</h1>
   </div>
+
+  <!-- Navegação entre telas do lojista -->
+  <div class="divBarraNavegacao">
+    <nav class="barra-nav">
+      <a href="estoque.html" class="icone-estoque">📦</a>
+      <a href="config.html" class="icone-configuracao">⚙️</a>
+      <a href="produtosCadastro.html" class="icone-cadastro">🛍️</a>
+      <a href="dados.html" class="icone-dados">📊</a>
+    </nav>
+  </div>
+
   <h1 id="TituloCatalogo">Catálogo de produtos</h1>
 
-  <!--Fotos dos produtos e descrições-->
+  <!-- Fotos dos produtos e descrições -->
   <div class="catalogoProdutos">
-    <img id="preview" src="imagem-padrao.jpg" alt="Foto do produto" width="150">
-    <input type="file" id="inputImagem" accept="image/*">
+    <div id="fila">
+      <!-- os produtos cadastrados aparecem aqui pelo JS -->
+    </div>
   </div>
 
-    <!--Parte para cadastrar os produtos da loja-->
-    <div class="CadastroProduto">
-        <label for="nome" id="nome">Nome:</label>
-        <input type="text" id="NomeProduto" name="NomeProduto" placeholder="Digite o nome do produto">
+  <!-- Parte para cadastrar os produtos da loja -->
+  <div class="CadastroProduto">
+    <label for="NomeProduto" id="nome">Nome:</label>
+    <input type="text" id="NomeProduto" name="NomeProduto" placeholder="Digite o nome do produto">
 
-        <label for="preco" id="preco">Preço:</label>
-        <input type="number" id="PrecoProduto" name="PrecoProduto" placeholder="0,00">
+    <label for="PrecoProduto" id="preco">Preço:</label>
+    <input type="number" id="PrecoProduto" name="PrecoProduto" placeholder="0,00" step="0.01" min="0">
 
-        <label for="categoria" id="categoria">Categoria:</label>
-        <input type="text" id="CategoriaProduto" name="categoriaProduto" placeholder="Ex: Blusas, Calças">
+    <label for="CategoriaProduto" id="categoria">Categoria:</label>
+    <input type="text" id="CategoriaProduto" name="CategoriaProduto" placeholder="Ex: Blusas, Calças">
 
-     <label for="DescricaoProduto" id="descricao">Descrição:</label>
-<textarea id="DescricaoProduto" name="DescricaoProduto" placeholder="Descrição do produto..."></textarea>
-      <h3 id="AvisoFotos">Arraste a foto ou clique para enviar</h3>
-      <button id="CadastrarprodutoBotão">Cadastrar produto</button>
-</div>
- </body>
- </html>
+    <label for="DescricaoProduto" id="descricao">Descrição:</label>
+    <textarea id="DescricaoProduto" name="DescricaoProduto" placeholder="Descrição do produto..."></textarea>
+
+    <h3 id="AvisoFotos">Clique para escolher a imagem</h3>
+
+    <!-- Botão para escolher a foto -->
+    <div class="area-imagem">
+      <label for="inputImagem" class="botao-imagem">Escolher arquivo</label>
+      <input type="file" id="inputImagem" accept="image/*" style="display: none;">
+    </div>
+
+    <br>
+    <button type="button" id="btnCadastrar">Salvar</button>
+  </div>
+
+  <script src="js/painel.js"></script>
+</body>
+</html>
