@@ -160,3 +160,93 @@ body {
   color: #fff;
   border-color: #000;
 }
+
+.grid-cores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.campo-cor { width: 100%; }
+
+.campo-cor label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.linha-cor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+}
+input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
+input[type="color"]::-webkit-color-swatch { border: none; border-radius: 6px; }
+input[type="color"]::-moz-color-swatch { border: none; border-radius: 6px; }
+
+.linha-cor input[type="text"] {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+/* No celular, um embaixo do outro */
+@media (max-width: 560px) {
+  .grid-cores { grid-template-columns: 1fr; }
+}
+
+.grid-cores {
+  max-width: 900px;
+  margin: 8px auto 0;
+  box-sizing: border-box;
+}
+
+.linha-cor {
+  box-sizing: border-box;
+}
+
+#SalvarBotaoconfigu{
+  background-color: #111;
+  color: #fff;
+  border-color: #ddd;
+  border-radius: 13px;
+  padding: 15px;
+  margin-top: 30px;
+  width: 94%;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#previaTitulo{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 850px;
+}
+/* ---------- Nome da Loja ---------- */
+#aquiNomeLoja{
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+color:#000;
+}

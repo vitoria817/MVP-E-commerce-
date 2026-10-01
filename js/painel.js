@@ -2,7 +2,7 @@ const fila = document.getElementById("fila");
 const inputImagem = document.getElementById("inputImagem");
 const btn = document.getElementById("btnCadastrar");
 
-btn.addEventListener("click",function() {
+btn?.addEventListener("click",function() {
     const nome = document.getElementById("NomeProduto").value;
     const preco = document.getElementById("PrecoProduto").value;
     const categoria = document.getElementById("CategoriaProduto").value;
@@ -63,3 +63,26 @@ btn.addEventListener("click",function() {
     document.getElementById("DescricaoProduto").value = "";
     inputImagem.value = "";
 });
+//-------------------------- parte da configu --------------------------------
+function salvarNomeLoja() {
+    const NomeLOJA = document.getElementById("NomeLOJA").value;
+
+    if (NomeLOJA.trim() === "") {
+        alert("Digite o nome da loja");
+    } else {
+        localStorage.setItem("lojaSalva", NomeLOJA);
+        alert("Nome da loja salvo!");
+    }
+}
+
+// Liga o botão à função (só se o botão existir nesta tela)
+const botaoSalvar = document.getElementById("SalvarBotaoconfigu");
+if (botaoSalvar) {
+    botaoSalvar.addEventListener("click", salvarNomeLoja);
+}
+
+// Mostra o nome salvo (só se o <h1> existir nesta tela)
+const tituloLoja = document.getElementById("aquiNomeLoja");
+if (tituloLoja) {
+    tituloLoja.textContent = localStorage.getItem("lojaSalva") || "";
+}
